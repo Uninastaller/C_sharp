@@ -9,7 +9,7 @@ namespace C_sharp
     class Tile
     {
 
-        private bool wall = true;
+        protected bool wall = true;
 
         public Tile(bool wall)
         {
