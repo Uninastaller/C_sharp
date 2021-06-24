@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace C_sharp
 {
@@ -10,27 +7,25 @@ namespace C_sharp
     {
         private int x;
         private int y;
-        private Maze maze;
 
-        public Finish(Maze maze) : base(false)
-        {
-            this.maze = maze;
-        }
+        public Finish() : base(false) { }
+        
+       
 
-        public void setCoordinates(int x, int y)
+        public void SetCoordinates(int x, int y)
         {
             this.x = x;
             this.y = y;
             SetWall(false);
         }
 
-        public override char SetLook()
+        public override char GetLook()
         {
-            return '◙';
+            return '»';
         }
         public override void Action()
         {
-            maze.won();
+            throw new NotImplementedException();
         }
 
         public int GetX() { return x;}

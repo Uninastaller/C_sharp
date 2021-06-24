@@ -9,7 +9,7 @@ namespace C_sharp
     class Tile
     {
 
-        private bool wall;
+        private bool wall = true;
 
         public Tile(bool wall)
         {
@@ -18,9 +18,9 @@ namespace C_sharp
 
         public bool IsWall() { return wall; }
         public void SetWall(bool wall) { this.wall = wall; }
-        public virtual char SetLook()
+        public virtual char GetLook()
         {
-            if (this.wall) return '■';
+            if (this.wall) return '█' ;
             else return ' ';
         }
         public virtual void Action()
